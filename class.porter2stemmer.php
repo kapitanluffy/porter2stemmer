@@ -436,7 +436,7 @@ class Porter2Stemmer{
 
 					if (key_exists($suffix, $precededBy)) {
 
-						$parts = split(',', $precededBy[$suffix]);
+						$parts = explode(',', $precededBy[$suffix]);
 						foreach ($parts as $part) {
 
 							if (substr($word, -(strlen($suffix)+1), strlen($part)) == $part){
